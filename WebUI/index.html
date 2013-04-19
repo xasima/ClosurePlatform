@@ -2,24 +2,36 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Closure Platform test</title>
-	  <link rel="stylesheet" href="themes/default/css/0-reset.css" type="text/css" media="screen" title="no title">
-	  <link rel="stylesheet" href="themes/default/css/1-main.css" type="text/css" media="screen" title="no title">
-	  <link rel="stylesheet" href="themes/default/css/other/1-test.css" type="text/css" media="screen" title="no title">
+    <title>University person search</title>
+	  <link rel="stylesheet" href="themes/default/css/0-reset.css" type="text/css" media="screen" title="no title">	       
+      <link rel="stylesheet" href="themes/default/css/other/1-test.css" type="text/css" media="screen" title="no title">
+
 <script type="text/javascript" charset="utf-8">
 	Handlers={};
 	Handlers.rootPath="/";
 </script>
 	  <script type="text/javascript" src="themes/default/js/renaming_map.js"></script>
-	  <script type="text/javascript" src="js/jquery/core/1.8.1/dev/jquery.js"></script>
-	  <script type="text/javascript" src="js/third_party/moment/moment.js"></script>
-	  <script type="text/javascript" src="js/closure/goog/base.js"></script>
- 	 <script type="text/javascript" charset="utf-8">
- 	 goog.require('example.page.index');
-  	</script>
+	  <script type="text/javascript" src="js/jquery/core/1.8.1/dev/jquery.js"></script>           
+	  <script type="text/javascript" src="js/third_party/moment/moment.js"></script>    
+    <script type="text/javascript" src="js/pages/moduleinfo.js"></script>
+    <script type="text/javascript" src="js/closure/goog/base.js"></script>
+
   </head>
-  <body onload="init();">
+  <body>
+    <!-- onload="init();"
    		<div id="l-fxd-screen1" style="">Loading...</div>
    		<div id="l-fxd-screen2" style="display:none;"></div>
+      -->
+    <div id="content"></div>
+    <div id="debug"></div>
+      <!-- Development tool: Less Grid by @RnowM, http://arnaumarch.com/en/less-grid.html
+    <script type="text/javascript" src="js/third_party/less/less-grid-4.js"></script> -->
+    
+
+
+    <script type="text/javascript">
+      goog.require('example.App_init');
+    </script>   
+
   </body>
 </html>
