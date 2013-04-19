@@ -4,6 +4,7 @@ goog.require('goog.dom');
 goog.require('goog.string');
 goog.require('goog.ui.Component');
 goog.require('goog.debug.Logger');	
+goog.require('example.debug');	
  
 /**
 * @param {!goog.dom.DomHelper} dom
@@ -20,7 +21,7 @@ goog.inherits(example.App, goog.ui.Component);
  * @type {goog.debug.Logger}
  * @private
  */
-example.Settings.prototype.logger_ = goog.debug.Logger.getLogger(
+example.App.prototype.logger_ = goog.debug.Logger.getLogger(
     'example.App');
 
 /**
