@@ -5,18 +5,23 @@ goog.require('goog.string');
 goog.require('goog.ui.Component');
 goog.require('goog.debug.Logger');	
  
-
 /**
 * @param {!goog.dom.DomHelper} dom
 * @constructor
 * @extends {goog.ui.Component}
 */
 example.App = function(dom) {
-	goog.base(this, dom);
-	this._log = goog.debug.Logger.getLogger('Intro');
-	this._log.info("Inside app");
+	goog.base(this, dom);	
 };
 goog.inherits(example.App, goog.ui.Component);
+
+/**
+ * A logger.
+ * @type {goog.debug.Logger}
+ * @private
+ */
+example.Settings.prototype.logger_ = goog.debug.Logger.getLogger(
+    'example.App');
 
 /**
 * @type {example.Settings}
@@ -33,6 +38,7 @@ example.App.buttonClickHandler_ = goog.nullFunction;
 /** @inheritDoc */
 example.App.prototype.createDom = function() {
 	var dom = this.dom_;
+	this.logger_.info('Create DOM');
 	var el = dom.createDom('div', undefined /* opt_attributes */,
 		dom.createDom('span', undefined /* opt_attributes */, 'Messages appear here'),
 		dom.createDom('button', undefined /* opt_attributes */, 'Load Settings'));
@@ -89,7 +95,7 @@ example.App.instance_;
 /**
 * @param {string} id
 */
-example.App.install = function(id) {
+example.App.install = function(id) {	
 	if (example.App.instance_) return;
 	var dom = new goog.dom.DomHelper();
 	var app = new example.App(dom);
